@@ -1,0 +1,86 @@
+@import 'mixins';
+
+.home-page{
+    background-blend-mode: color;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-image{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.background-gradient {
+    height: 40%;
+    position: absolute;
+    background: linear-gradient(rgba(35, 56, 101, 0) 0%, #9ebff8 70%);
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.carousel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    min-width: 375px;
+}
+
+.arrow {
+    margin: 2em 2em;
+    cursor: pointer;
+    height: 2em;
+    z-index: 5;
+    opacity: 0.8;
+    &:hover {
+        scale: 1.25;
+        transition: 0.5s;
+        opacity: 1;
+    }
+}
+
+.movie-poster-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 2em;
+    z-index: 5;
+}
+
+.poster {
+    border-radius: 20px;
+    @include small {
+        height: 50vh;
+        min-width: 50vw;
+    }
+}
+.movie-heading {
+    font-size: 2.2em;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 40px;
+    @include small {
+        font-size: 1em;
+    }
+}
+
+.movie-title {
+    font-size: 36px;
+    margin:20px 0;
+    padding-top: 0;
+    font-weight: 600;
+    @include small {
+        font-size: 18px;
+    }
+}
